@@ -1,3 +1,4 @@
+//  include all header files a
 #include <stdio.h>
 #include <stdlib.h> /* for atoi() */
 #include <string.h>
@@ -6,9 +7,8 @@
 #include "listner_print.h"
 #include "globals.h"
 
-#define fileNameLength  32
-#define dateTimeLength  32
-#define fileLineLength  256
+
+
 
 
 FILE *source_file, *outputFile;
