@@ -1,0 +1,1 @@
+#define MAX_LINES_PER_PAGE  40
