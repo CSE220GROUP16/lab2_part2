@@ -7,6 +7,9 @@
 #include "listner_print.h"
 #include "globals.h"
 
+/*  ************************************************
+    function print each line with line number in front
+    ************************************************/
 void print_line(char print_buff[]){
     static int  line_count =0;
     line_count +=1;
@@ -15,6 +18,9 @@ void print_line(char print_buff[]){
 
     printf("%s",print_buff);
 }
+/*  ************************************************
+    Function just print page header
+    ************************************************/
 void print_page_header(){
     printf("**************************************\n");
     printf("************* Page Header  ***********\n");
