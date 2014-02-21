@@ -17,8 +17,8 @@ void init_lister(char fileN[] ){
 char *moder = "r";
 strcpy(source_name,fileN); // destination, source
 source_file = fopen(source_name, moder);
-
- if(testCase == 2)
+//case 2
+if(testCase == 2)
    testForCase2(source_file);
 
 
@@ -29,10 +29,6 @@ if (source_file == NULL) {
 time(&now);
 sprintf(dateAndTime, "%s", ctime(&now));
 printf("input file name is : %s  time is: %s", source_name, dateAndTime );
-
-
-
-
 }
 
 /*  ************************************************
@@ -40,7 +36,7 @@ printf("input file name is : %s  time is: %s", source_name, dateAndTime );
     line in not NULL.
     ************************************************/
 bool get_source_line(){
-
+// variable declaration and init
 bool value = false;
 bool line2Long = false;
 char source_buffer[fileLineLength];

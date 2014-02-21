@@ -26,25 +26,28 @@ char * myString = "";
     //test for input parameter
     testing = true;
 
-
+    //the belows will always be executed to verify input file
     if (testing)
         testForCase1(argc);
 
-
+    //testcase variable is set for each of the three test cases
+    //see submitted document for how to use test case
+    //the third parameter was used here as input argument which
+    //indicate that cases being tested.
     if ( argc >= 3 )
     {
-     testCase =  atoi(argv[2]);
+        testCase =  atoi(argv[2]);
     }
     else
         {testing = false ;    }
 
-// check existing of input file
-if (testCase == 3)
+    // testing for test case 3
+    if (testCase == 3)
     {
         testForCase3(argv[1]);
     }
- else
-{init_lister(argv[1]);}
+    else
+    {init_lister(argv[1]);}
 
 // loop thru the text file line by line until eof
 while ( continueReadingFile){

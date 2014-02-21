@@ -11,11 +11,11 @@
     function print each line with line number in front
     ************************************************/
 void print_line(char print_buff[]){
-    static int  line_count =0;
-    line_count +=1;
+    static int  line_count =0; //that variable alive even not inside the function
+    line_count +=1;            //increment line count by 1
+    //print page header and line content
     if ((line_count % MAX_LINES_PER_PAGE) == 1)
     {print_page_header(); }
-
     printf("%s",print_buff);
 }
 /*  ************************************************
