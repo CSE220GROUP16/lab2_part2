@@ -23,15 +23,8 @@ int testCase = 0;
 int main(int argc, char *argv[]){
 bool continueReadingFile = true;  // set var to true
 char * myString = "";
-
-     // check for input file, exit if no input file
-    // if (argc <2 ){
-    //      printf("input is: %d",argc);
-    //      return 0;
-   //  }
-
-
-        testing = true;
+    //test for input parameter
+    testing = true;
 
 
     if (testing)
@@ -47,8 +40,8 @@ char * myString = "";
 
 // check existing of input file
 if (testCase == 3)
-    {testForCase3(argv[1]);
-
+    {
+        testForCase3(argv[1]);
     }
  else
 {init_lister(argv[1]);}
@@ -58,7 +51,7 @@ while ( continueReadingFile){
   // loop breaks if raches eof with false return
   continueReadingFile = get_source_line();
 }
-printf("\nend reading file !\nTotal lines: %d ", line_number);
+printf("\nEnd reading file !\nThe total number of lines: %d ", line_number);
 
 return 0;
 }

@@ -42,25 +42,32 @@ printf("input file name is : %s  time is: %s", source_name, dateAndTime );
 bool get_source_line(){
 
 bool value = false;
+bool line2Long = false;
 char source_buffer[fileLineLength];
 char print_buffer[fileLineLength];
+char * temp;
 
 // continue if is not end of the file.
 if( fgets (source_buffer, fileLineLength, source_file)!=NULL ) {
-      /* writing content to stdout */
-      source_buffer[fileLineLength-1] = '\0';
         // truncate the line array if line size is larger than allowed size
-        //if (strlen(source_buffer) > fileLineLength){
-        // some code here
-        // insert eol at max location
-        //}
-      value = true;
-      line_number += 1;
-      //
-      sprintf(print_buffer,"%d: %s",line_number,source_buffer);
+        if(strlen(source_buffer)>lineMax)
+        {
+        temp = &source_buffer[lineMax]; //temp holds value of max line
+        source_buffer[lineMax]='\0';   //line max value to eol
+        line2Long = true;              //line2Long is true
+        }
+          value = true;                //value use for continue reading
+          line_number += 1;            //line number increment by 1
+          //use sprintf function to store line number and line content
+          sprintf(print_buffer,"%d: %s",line_number,source_buffer);
+          print_line(print_buffer);    //call print line function
 
-    print_line(print_buffer);
-
+        //restore to the original line content.
+        if (line2Long)
+        {
+            strcpy(temp, &source_buffer[lineMax]);
+            printf("\n");
+        }
     }
 
 //value = false;

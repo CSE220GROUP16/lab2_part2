@@ -6,6 +6,7 @@
 #define fileNameLength  32
 #define dateTimeLength  32
 #define fileLineLength  256
+#define lineMax 65
 
 //  initialize file pointers and other variables
 FILE *source_file, *outputFile;
