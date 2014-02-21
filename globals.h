@@ -16,4 +16,6 @@ char dateAndTime[dateTimeLength];
 //  get system time now
 time_t now;
 extern int line_number;
+extern bool testing;
+extern int testCase;
 #endif

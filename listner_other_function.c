@@ -17,6 +17,11 @@ void init_lister(char fileN[] ){
 char *moder = "r";
 strcpy(source_name,fileN); // destination, source
 source_file = fopen(source_name, moder);
+
+ if(testCase == 2)
+   testForCase2(source_file);
+
+
 if (source_file == NULL) {
   printf("Can't open input file %s!\n", source_name);
   exit(1);

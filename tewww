@@ -1,0 +1,62 @@
+3input file name is : listner2.c  time is: Thu Feb 20 20:13:36 2014
+**************************************
+************* Page Header  ***********
+*************              ***********
+**************************************
+1: #include <stdio.h>
+2: #include <stdlib.h> /* for atoi() */
+3: #include <string.h>
+4: #include <time.h>
+5: #include <stdbool.h>
+6: #include "listner_print.h"
+7: #include "globals.h"
+8: #include "listner_other_function.h"
+9: 
+10: //  function declaration before use
+11: void init_lister(char fileN[] );
+12: bool get_source_line();
+13: int line_number = 0;
+14: bool testing = false;
+15: /*  ************************************************
+16:     main program, program will reads input text file
+17:     and add line number in front of each line, then
+18:     output the result to user or output file.
+19:     ************************************************/
+20: int main(int argc, char *argv[]){
+21: bool continueReadingFile = true;  // set var to true
+22: 
+23:      // check for input file, exit if no input file
+24:      if (argc <2 ){
+25:           printf("input is: %d",argc);
+26:           return 0;
+27:      }
+28: 
+29:      printf("%d",argc);
+30:     // if (argc == 3)
+31:     //    testing = true;
+32: 
+33:   //  if (testing)
+34:    //     testForCase(1);
+35: 
+36: // check existing of input file
+37: init_lister(argv[1]);
+38: 
+39: // loop thru the text file line by line until eof
+40: while ( continueReadingFile){
+**************************************
+************* Page Header  ***********
+*************              ***********
+**************************************
+41:   // loop breaks if raches eof with false return
+42:   continueReadingFile = get_source_line();
+43: }
+44: printf("\nend reading file !\nTotal lines: %d ", line_number);
+45: 
+46: return 0;
+47: }
+48: 
+49: 
+50: 
+
+end reading file !
+Total lines: 50 
