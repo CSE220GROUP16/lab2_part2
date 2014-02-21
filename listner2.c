@@ -22,6 +22,7 @@ int testCase = 0;
     ************************************************/
 int main(int argc, char *argv[]){
 bool continueReadingFile = true;  // set var to true
+char * myString = "";
 
      // check for input file, exit if no input file
     // if (argc <2 ){
@@ -45,7 +46,12 @@ bool continueReadingFile = true;  // set var to true
         {testing = false ;    }
 
 // check existing of input file
-init_lister(argv[1]);
+if (testCase == 3)
+    {testForCase3(argv[1]);
+
+    }
+ else
+{init_lister(argv[1]);}
 
 // loop thru the text file line by line until eof
 while ( continueReadingFile){

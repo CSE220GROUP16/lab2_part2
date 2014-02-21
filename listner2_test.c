@@ -7,6 +7,12 @@
 #include "globals.h"
 #include "listner_other_function.h"
 
+ void  testForCase3( char argv[])
+ {
+printf ("03: Pass or Fail:\n");
+printf("\t:%s:\n", (init_lister(argv), "if you see noting between the colon and the if, then test 3 pass the function returned void else test 3 failed"));
+ }
+
  void  testForCase1(int argc )
  {
     if (argc < 2)

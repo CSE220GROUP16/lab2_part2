@@ -30,6 +30,9 @@ time(&now);
 sprintf(dateAndTime, "%s", ctime(&now));
 printf("input file name is : %s  time is: %s", source_name, dateAndTime );
 
+
+
+
 }
 
 /*  ************************************************
