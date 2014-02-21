@@ -9,8 +9,7 @@
 
 //  initialize file pointers and other variables
 FILE *source_file, *outputFile;
-//char *moder = "r";
-//char *modew = "w";
+
 char source_name[fileNameLength];
 char dateAndTime[dateTimeLength];
 
